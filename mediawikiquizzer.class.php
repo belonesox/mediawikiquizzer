@@ -1582,8 +1582,8 @@ EOT;
             $html .= self::getQuestionHtml($q, $k);
             if ($row)
             {
-                $html .= self::element('<br>');
-                $html .= self::element('<br>');
+                $html .= '<br/><br/>';
+                //$html .= self::element('<br>');
                 $html .= self::xelement('h4', NULL, wfMsg('mwquizzer-your-answer'));
                 $html .= self::xelement('div', array('class' => 'mwq-your-answer'), !empty($row['cs_choice_num']) ? $q['choiceByNum'][$row['cs_choice_num']]['ch_text'] : $row['cs_text']);
             }
